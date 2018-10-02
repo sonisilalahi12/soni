@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,  
+    title:{
+        text: "Kinerja Masa Lalu"
+    },
+   axisX:{
+                valueFormatString: "DD MMM",
+                crosshair: {
+                    enabled: true,
+                    snapToDataPoint: true
+                }
+            },
+    data: [{
+        type: "area",
+                xValueFormatString: "DD MMM",
+                yValueFormatString: "€##0.00",
+                dataPoints: [
+                  { x: new Date("2018-03-01"), y: 85.3},
+                  { x: new Date("2018-03-02"), y: 83.97},
+                  { x: new Date("2018-03-05"), y: 83.49},
+                  { x: new Date("2018-03-06"), y: 84.16},
+                  { x: new Date("2018-03-07"), y: 84.86},
+                  { x: new Date("2018-03-08"), y: 84.97},
+                  { x: new Date("2018-03-09"), y: 85.13},
+                  { x: new Date("2018-03-12"), y: 85.71},
+                  { x: new Date("2018-03-13"), y: 84.63},
+                  { x: new Date("2018-03-14"), y: 84.17},
+                  { x: new Date("2018-03-15"), y: 85.12},
+                  { x: new Date("2018-03-16"), y: 85.86},
+                  { x: new Date("2018-03-19"), y: 85.17},
+                  { x: new Date("2018-03-20"), y: 85.99},
+                  { x: new Date("2018-03-21"), y: 86.1},
+                  { x: new Date("2018-03-22"), y: 85.33},
+                  { x: new Date("2018-03-23"), y: 84.18},
+                  { x: new Date("2018-03-26"), y: 85.21},
+                  { x: new Date("2018-03-27"), y: 85.81},
+                  { x: new Date("2018-03-28"), y: 85.56},
+                  { x: new Date("2018-03-29"), y: 88.15}
+                ]
+    }]
+    });
+chart.render();
+
+}
+</script>
+    <title>Ta</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!-- !-- Header -->
+        <div class="header-wrap d-none d-md-block">
+            <div class="container">
+                <div class="row">
+                    
+                    <!-- Left header box -->
+                    <header class="col-6 text-left">
+                        <h1>Batavia Dana Kas Maxima</h1>
+                    </header>
+                    
+                    <!-- Right header box -->
+                    <div class="col-6 text-right">               
+                        
+                            <button type="button" class="btn btn-secondary">Beli</button>
+                            <button type="button" class="btn btn-light">Bandingkan</button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Main navigation -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container">
+                
+                <!-- Company name shown on mobile -->
+                <a class="navbar-brand d-md-none d-lg-none d-xl-none" href="#"><span>Company</span>Name</a>
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main navigation items -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                                <a class="nav-link" href="index.html">Kinerja <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Detail</a>
+                        </li>
+
+                        <li class="nav-item">
+                                <a class="nav-link" href="#">Dokumen</a>
+                        </li>
+
+                       
+                    </ul>
+                    
+                   
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Main content area -->
+        <main class="container">
+            <div class="row">
+                
+                <!-- Main content -->
+                <div class="col-sm-8">
+                    <article>
+                        
+                </aside> 
+                
+                
+            </div> 
+        </main>
+
+        <div id="buttonReq">
+                    
+                    <input type='button' id='button1m' value='1M' class='rangeSelector gnav' onclick="javascript:reqButton('1m');"/>
+                    <input type='button' id='button3m' value='3M' class='rangeSelector gnav' onclick="javascript:reqButton('3m');"/>
+                    <input type='button' id='button6m' value='6M' class='rangeSelector gnav' onclick="javascript:reqButton('6m');"/>
+                    <input type='button' id='buttonytd' value='YTD'class='rangeSelector gnav' onclick="javascript:reqButton('ytd');"/>
+                    <input type='button' id='button1y' value='1Y' class='rangeSelector gnav' onclick="javascript:reqButton('1y');"/>
+                    <input type='button' id='button1y' value='1Y' class='rangeSelector gnav' onclick="javascript:reqButton('1y');"/>
+        </div>
+
+       <div id="chartContainer" style="height: 370px; max-width: 820px; margin: 50px auto;" ></div>
+
+
+        <!-- Bootcamp JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+    
+  </body>
+</html>
